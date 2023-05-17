@@ -1,0 +1,53 @@
+$border: 2px solid #ebebeb;
+@mixin input_button {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  .login-box {
+    padding: 60px;
+    border: $border;
+    background-color: white;
+  }
+
+  input {
+    @include input_button;
+    border: $border;
+    background-color: #f8f8f8;
+  }
+
+  .login-btn {
+    @include input_button;
+    margin-top: 30px;
+    border: none;
+    background-color: #c4e1fb;
+    color: white;
+    font-weight: bold;
+  }
+
+  .repassword {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .repassword a {
+    color: #0a3c6e;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .login-on {
+    background-color: blue;
+  }
+}
