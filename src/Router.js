@@ -1,12 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './pages/jaewoong/Main';
+import MainJw from './pages/jaewoong/Main/Main';
+import LoginJw from './pages/jaewoong/Login/Login';
+import MainGw from './pages/gunwoong/Main/Main';
+import LoginGw from './pages/gunwoong/Login/Login';
+import MainMj from './pages/minjeong/Main/Main';
+import LoginMj from './pages/minjeong/Login/Login';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/mainjw" element={<MainJw />} />
+        <Route path="/loginjw" element={<LoginJw />} />
+        <Route path="/mainmj" element={<MainMj />} />
+        <Route path="/loginmj" element={<LoginMj />} />
+        <Route path="/maingw" element={<MainGw />} />
+        <Route path="/logingw" element={<LoginGw />} />
       </Routes>
     </BrowserRouter>
   );
