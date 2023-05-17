@@ -6,10 +6,12 @@ import MainGw from './pages/gunwoong/Main/Main';
 import LoginGw from './pages/gunwoong/Login/Login';
 import MainMj from './pages/minjeong/Main/Main';
 import LoginMj from './pages/minjeong/Login/Login';
+import Nav from './components/Nav/Nav';
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/mainjw" element={<MainJw />} />
         <Route path="/loginjw" element={<LoginJw />} />
