@@ -1,15 +1,15 @@
-import React from "react";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Main from "./pages/Main/Main"
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './pages/jaewoong/Main';
 
-const Router = () =>{
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Main />} />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+const Router = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default Router;
