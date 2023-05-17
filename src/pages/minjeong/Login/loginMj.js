@@ -1,13 +1,13 @@
 /* eslint-disable */
-import React from "react";
-import "./LoginMj.scss";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './loginMj.scss';
+import { useNavigate } from 'react-router-dom';
 
 function LoginMj() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("./main");
+    navigate('./main');
   };
 
   return (
@@ -16,10 +16,10 @@ function LoginMj() {
         <p className="westagram">Westagram</p>
         <input
           className="inputId"
-          type={"text"}
+          type={'text'}
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
-        <input className="inputPw" type={"password"} placeholder="비밀번호" />
+        <input className="inputPw" type={'password'} placeholder="비밀번호" />
         <button onClick={goToMain} className="disabled" type="button">
           로그인
         </button>

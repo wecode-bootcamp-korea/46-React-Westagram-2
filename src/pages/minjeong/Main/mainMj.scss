@@ -1,10 +1,7 @@
-
-@import "../../styles/variables.scss";
-
 body {
   width: 100%;
   background-color: whitesmoke;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 header {
@@ -40,7 +37,7 @@ nav {
     }
 
     h3 {
-      font-family: "Lobster", cursive;
+      font-family: 'Lobster', cursive;
       font-size: 30px;
       height: 30px;
       padding-left: 13px;
@@ -101,7 +98,7 @@ section {
 
 .feedLeft {
   width: 500px;
-  border: $grayborder;
+  border: 1px solid lightgray;
 }
 
 .top {
@@ -211,7 +208,7 @@ section {
 
 .storyWrap {
   margin-top: 15px;
-  border: $grayborder;
+  border: 1px solid lightgray;
   background-color: white;
 }
 
@@ -222,7 +219,7 @@ section {
 
 .sideDown {
   margin-top: 15px;
-  border: $grayborder;
+  border: 1px solid lightgray;
   background-color: white;
 
   .recomend {

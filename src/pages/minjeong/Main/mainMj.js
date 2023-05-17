@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React from "react";
-import "./Main.scss";
+import React from 'react';
+import './mainMj.scss';
 
 function MainMj() {
   return (
@@ -14,7 +14,7 @@ function MainMj() {
 
           <div className="searchBar">
             <img src="image/search.png" alt="돋보기" />
-            <input type={"text"} placeholder="검색" />
+            <input type={'text'} placeholder="검색" />
           </div>
 
           <div className="icons">
@@ -97,7 +97,7 @@ function MainMj() {
 
             <div className="send">
               <input
-                type={"text"}
+                type={'text'}
                 className="comment"
                 placeholder="댓글 달기..."
                 required
