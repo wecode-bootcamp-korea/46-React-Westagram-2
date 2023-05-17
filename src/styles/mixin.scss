@@ -1,0 +1,10 @@
+@mixin flexSort($justifyContent, $alignItems) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
