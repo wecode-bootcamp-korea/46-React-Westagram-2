@@ -1,9 +1,9 @@
 /* eslint-disable */
 import React from "react";
-import "./Login.scss";
+import "./LoginMj.scss";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function LoginMj() {
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -29,4 +29,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginMj;

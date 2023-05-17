@@ -2,7 +2,7 @@
 import React from "react";
 import "./Main.scss";
 
-function Main() {
+function MainMj() {
   return (
     <>
       <header>
@@ -205,4 +205,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default MainMj;
