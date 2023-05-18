@@ -1,13 +1,12 @@
 import './Login.scss';
 import '../../../styles/common.scss';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function LoginJw() {
   let [id, setId] = useState('');
   let [pw, setPw] = useState('');
   const navigate = useNavigate();
-  const is = id.includes('@') && pw.length >= 5;
   const saveUserId = e => {
     setId(e.target.value);
   };
@@ -34,7 +33,6 @@ function LoginJw() {
             onChange={saveUserPw}
           />
         </form>
-        {/* {id.includes('@') ? setBtn('blue') : null} */}
         <button
           className={
             id.includes('@') && pw.length >= 5 ? 'login-on' : 'login-btn'
