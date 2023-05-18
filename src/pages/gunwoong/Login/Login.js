@@ -5,8 +5,17 @@ import './Login.scss';
 
 const LoginGw = () => {
   const navigate = useNavigate();
+
   const goToMain = () => {
-    navigate('/main');
+    navigate('/mainGw');
+  };
+
+  const saveUserId = event => {
+    const state = event.target.value;
+  };
+
+  const savedUserPw = event => {
+    const state = event.target.value;
   };
   return (
     <>
@@ -27,15 +36,24 @@ const LoginGw = () => {
             id="loginIdInput"
             type="text"
             placeholder="전화번호,사용자 이름 또는 이메일"
+            onChange={() => {
+              saveUserId();
+            }}
           />
-          <input id="loginPwInput" type="password" placeholder="비밀번호" />
+          <input
+            id="loginPwInput"
+            type="password"
+            placeholder="비밀번호"
+            onChange={() => {
+              savedUserPw();
+            }}
+          />
           <button id="loginBtn" onClick={goToMain}>
             로그인
           </button>
         </div>
         <div className="loginLink">
-          <div>비밀번호를 잊으셨나요?</div>
-          <Link to="/mainGw">Main 으로 이동하는 Link component</Link>
+          <Link to="/mainGw">비밀번호를 잊으셨습니까?</Link>
         </div>
       </div>
     </>
