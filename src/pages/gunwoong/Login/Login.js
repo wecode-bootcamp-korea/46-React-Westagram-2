@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../../styles/common.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const LoginGw = () => {
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -11,11 +13,11 @@ const LoginGw = () => {
   };
 
   const saveUserId = event => {
-    const state = event.target.value;
+    setId(event.target.value);
   };
 
   const savedUserPw = event => {
-    const state = event.target.value;
+    setPw(event.target.value);
   };
   return (
     <>
