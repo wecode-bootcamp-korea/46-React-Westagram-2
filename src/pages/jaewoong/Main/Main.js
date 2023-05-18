@@ -1,7 +1,21 @@
 import './Main.scss';
 import '../../../styles/common.scss';
+import { useState } from 'react';
 
 function MainJw() {
+  let [comment, setComment] = useState('');
+  let [saveComments, setSaveComments] = useState([]);
+  function createComment(e) {
+    if (e.key === 'Enter') {
+      if (comment === '') {
+        e.preventDefault();
+      } else {
+        let copy = [...saveComments];
+        copy.push(comment);
+        setSaveComments(copy);
+      }
+    }
+  }
   return (
     <>
       <nav>
@@ -46,14 +60,16 @@ function MainJw() {
             <div className="nav-menu bubble show">
               <div className="menu">
                 <p>
-                  <i className="fa-regular fa-user"></i>&nbsp;&nbsp;&nbsp;프로필
+                  <i className="fa-regular fa-user" />
+                  &nbsp;&nbsp;&nbsp;프로필
                 </p>
                 <p>
-                  <i className="fa-regular fa-bookmark"></i>
+                  <i className="fa-regular fa-bookmark" />
                   &nbsp;&nbsp;&nbsp;저장됨
                 </p>
                 <p>
-                  <i className="fa-solid fa-gear"></i>&nbsp;&nbsp;&nbsp;설정
+                  <i className="fa-solid fa-gear" />
+                  &nbsp;&nbsp;&nbsp;설정
                 </p>
               </div>
               <div className="logout">
@@ -63,7 +79,7 @@ function MainJw() {
           </div>
         </div>
       </nav>
-      <div className="speech-bubble search-result show"></div>
+      <div className="speech-bubble search-result show" />
       <main>
         <div className="main-left">
           <div className="profile">
@@ -86,12 +102,12 @@ function MainJw() {
           <div className="feed-content">
             <div className="content-menu">
               <div className="left">
-                <i className="fa-solid fa-heart"></i>
-                <i className="fa-regular fa-comment"></i>
-                <i className="fa-solid fa-arrow-up-from-bracket"></i>
+                <i className="fa-solid fa-heart" />
+                <i className="fa-regular fa-comment" />
+                <i className="fa-solid fa-arrow-up-from-bracket" />
               </div>
               <div className="right">
-                <i className="fa-regular fa-bookmark"></i>
+                <i className="fa-regular fa-bookmark" />
               </div>
             </div>
 
@@ -109,25 +125,9 @@ function MainJw() {
             </div>
 
             <div className="content-reply">
-              <div className="template">
-                <p>jaewing 가나다라마바사</p>
-                <div>
-                  <button className="setting-reply heart">
-                    <i className="fa-solid fa-heart"></i>
-                  </button>
-                  <button className="setting-reply delete">삭제</button>
-                </div>
-              </div>
-
-              <div className="template">
-                <p>jaewing 가나다라마바사</p>
-                <div>
-                  <button className="setting-reply heart">
-                    <i className="fa-solid fa-heart"></i>
-                  </button>
-                  <button className="setting-reply delete">삭제</button>
-                </div>
-              </div>
+              {saveComments.map((a, i) => {
+                return <Comment key={i} saveComments={a} />;
+              })}
             </div>
             <p className="time">
               <span>42</span>분 전
@@ -135,8 +135,31 @@ function MainJw() {
           </div>
 
           <div className="reply-box">
-            <input type="text" placeholder="댓글 달기..." className="reply" />
-            <button className="btn upload">게시</button>
+            <input
+              type="text"
+              placeholder="댓글 달기..."
+              className="reply"
+              onChange={e => {
+                setComment(e.target.value);
+              }}
+              onKeyPress={e => {
+                createComment(e);
+              }}
+            />
+            <button
+              className="btn upload"
+              onClick={e => {
+                if (comment === '') {
+                  e.preventDefault();
+                } else {
+                  let copy = [...saveComments];
+                  copy.push(comment);
+                  setSaveComments(copy);
+                }
+              }}
+            >
+              게시
+            </button>
           </div>
         </div>
 
@@ -279,5 +302,19 @@ function MainJw() {
     </>
   );
 }
+
+const Comment = props => {
+  return (
+    <div className="template">
+      <p>{props.saveComments}</p>
+      <div>
+        <button className="setting-reply heart">
+          <i className="fa-solid fa-heart" />
+        </button>
+        <button className="setting-reply delete">삭제</button>
+      </div>
+    </div>
+  );
+};
 
 export default MainJw;
