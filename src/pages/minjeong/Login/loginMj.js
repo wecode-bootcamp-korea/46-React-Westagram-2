@@ -7,21 +7,23 @@ function LoginMj() {
   const navigate = useNavigate();
   let [id, setId] = useState('');
   let [pw, setPw] = useState('');
+  let [isValid, setIsValid] = useState(false);
 
-  function saveUserId(evnet) {
+  function saveUserId(event) {
     setId(event.target.value);
     console.log('id :', id);
   }
 
-  function saveUserPw(evnet) {
+  function saveUserPw(event) {
     setPw(event.target.value);
     console.log('pw :', pw);
   }
 
   const goToMain = () => {
-    saveUserId.inclu;
     navigate('/mainmj');
   };
+
+  const isActive = id.includes('@') && pw.length >= 5;
 
   return (
     <div className="Login">
@@ -40,12 +42,8 @@ function LoginMj() {
           onChange={saveUserPw}
         />
         <button
-          onClick={e => {
-            setId(e.target.value).inclu('@') && setPw(e.target.value) > 5
-              ? button
-              : disable;
-          }}
-          className="disabled"
+          onClick={goToMain}
+          className={isActive ? 'abledButton' : 'disabled'}
           type="button"
         >
           로그인
