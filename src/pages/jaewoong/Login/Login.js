@@ -1,9 +1,14 @@
 import './Login.scss';
 import '../../../styles/common.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function LoginJw() {
+  let [id, setId] = useState('');
   const navigate = useNavigate();
+  const saveUserId = e => {
+    setId(e.target.value);
+  };
   return (
     <div className="container">
       <div className="login-box">
@@ -15,12 +20,14 @@ function LoginJw() {
             placeholder="전화번호,사용자 이름 또는 이메일"
             id="id"
             className=""
+            onChange={saveUserId}
           />
           <input
             type="password"
             placeholder="비밀번호"
             id="pw"
             className="input"
+            onChange={saveUserId}
           />
         </form>
 
