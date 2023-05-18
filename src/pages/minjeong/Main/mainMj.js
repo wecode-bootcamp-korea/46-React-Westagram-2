@@ -6,14 +6,18 @@ function MainMj() {
   return (
     <>
       <header>
-        <nav>
+        <nav className="navBar">
           <div className="logo">
-            <img src="image/instagram.png" alt="로고" />
+            <img
+              className="westagramImg"
+              src="../../../images/minjeong/instagram.png"
+              alt="로고"
+            />
             <h3 className="westagramLogo">Westagram</h3>
           </div>
 
           <div className="searchBar">
-            <img src="image/search.png" alt="돋보기" />
+            <img src="../../../images/minjeong/search.png" alt="돋보기" />
             <input type={'text'} placeholder="검색" />
           </div>
 
@@ -44,21 +48,25 @@ function MainMj() {
             <div className="feedtop">
               <img
                 className="profile"
-                src="image/circe-denyer-W_8Tivmufmo-unsplash.png"
+                src="../../../images/minjeong/circe-denyer-W_8Tivmufmo-unsplash.png"
               />
               <p>rocket.racoon</p>
             </div>
 
-            <img className="threeDots" src="image/more.png" alt="dots" />
+            <img
+              className="threeDots"
+              src="../../../images/minjeong/more.png"
+              alt="dots"
+            />
           </div>
 
           <div className="feedImg">
-            <img src="image/racoon.png" />
+            <img src="../../../images/minjeong/racoon.png" />
           </div>
 
           <div className="underLike">
             <div className="likeLeft">
-              <img src="image/tree.png" alt="tree" />
+              <img src="../../../images/minjeong/tree.png" alt="tree" />
               <p>
                 <strong>groot.IAM</strong>님 외 <strong>20</strong>명이
                 좋아합니다.
@@ -71,7 +79,10 @@ function MainMj() {
                     <strong>Star_Lord_Quill</strong> 귀엽네...
                   </p>
                   <div className="delLike">
-                    <img src="image/emptyheart.png" alt="empty" />
+                    <img
+                      src="../../../images/minjeong/emptyheart.png"
+                      alt="empty"
+                    />
                     <button className="deletebtn" type="button">
                       삭제
                     </button>
@@ -83,7 +94,10 @@ function MainMj() {
                     <strong>DraxDoesntDance</strong> 아주 귀여워..
                   </p>
                   <div className="delLike">
-                    <img src="image/emptyheart.png" alt="empty" />
+                    <img
+                      src="../../../images/minjeong/emptyheart.png"
+                      alt="empty"
+                    />
                     <button className="deletebtn" type="button">
                       삭제
                     </button>
@@ -110,7 +124,7 @@ function MainMj() {
         <section className="feedRight">
           <div className="side-right">
             <div className="wecode">
-              <img src="image/computer.png" alt="computer" />
+              <img src="../../../images/minjeong/computer.png" alt="computer" />
               <div className="wecodeId">
                 <p className="bold"> wecode_bootcamp</p>
                 <p className="lightcolor">
@@ -127,7 +141,11 @@ function MainMj() {
             </div>
 
             <div className="story">
-              <img className="profileImg" src="image/rabbit.png" alt="rabbit" />
+              <img
+                className="profileImg"
+                src="../../../images/minjeong/rabbit.png"
+                alt="rabbit"
+              />
               <div className="storyText">
                 <p className="bold">Rabbit.floor</p>
                 <p className="lightcolor">33분 전</p>
@@ -135,7 +153,11 @@ function MainMj() {
             </div>
 
             <div className="story">
-              <img className="profileImg" src="image/babyy.png" alt="babies" />
+              <img
+                className="profileImg"
+                src="../../../images/minjeong/babyy.png"
+                alt="babies"
+              />
               <div className="storyText">
                 <p className="bold">Baby_rocket</p>
                 <p className="lightcolor">45분 전</p>
@@ -145,7 +167,7 @@ function MainMj() {
             <div className="story">
               <img
                 className="profileImg"
-                src="image/수달스.png"
+                src="../../../images/minjeong/수달스.png"
                 alt="otters"
               />
               <div className="storyText">
@@ -162,7 +184,10 @@ function MainMj() {
             </div>
 
             <div className="recomend">
-              <img className="profileImg" src="image/puppy.png" />
+              <img
+                className="profileImg"
+                src="../../../images/minjeong/puppy.png"
+              />
               <div className="storyText">
                 <p className="bold">dogggy_DOG</p>
                 <p className="lightcolor">Rabbit.floor님 외 2명이...</p>
@@ -171,7 +196,10 @@ function MainMj() {
             </div>
 
             <div className="recomend">
-              <img className="profileImg" src="image/dogrun.png" />
+              <img
+                className="profileImg"
+                src="../../../images/minjeong/dogrun.png"
+              />
               <div className="storyText">
                 <p className="bold">Run.joaaaa</p>
                 <p className="lightcolor">Baby_rocket님 외 4명이...</p>
@@ -182,7 +210,7 @@ function MainMj() {
             <div className="recomend">
               <img
                 className="profileImg"
-                src="image/manja-vitolic-gKXKBY-C-Dk-unsplash.png"
+                src="../../../images/minjeong/manja-vitolic-gKXKBY-C-Dk-unsplash.png"
               />
               <div className="storyText">
                 <p className="bold">kittyTheCat</p>

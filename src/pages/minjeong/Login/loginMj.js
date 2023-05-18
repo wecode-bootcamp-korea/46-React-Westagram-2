@@ -7,7 +7,7 @@ function LoginMj() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('./main');
+    navigate('/mainmj');
   };
 
   return (

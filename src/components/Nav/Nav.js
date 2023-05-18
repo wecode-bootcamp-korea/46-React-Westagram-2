@@ -1,5 +1,5 @@
 const Nav = () => {
-  return <div>ddkd</div>;
+  return <div></div>;
 };
 
 export default Nav;
