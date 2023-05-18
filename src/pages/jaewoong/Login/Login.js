@@ -5,15 +5,19 @@ import { useState } from 'react';
 
 function LoginJw() {
   let [id, setId] = useState('');
+  let [pw, setPw] = useState('');
   const navigate = useNavigate();
+  const is = id.includes('@') && pw.length >= 5;
   const saveUserId = e => {
     setId(e.target.value);
+  };
+  const saveUserPw = e => {
+    setPw(e.target.value);
   };
   return (
     <div className="container">
       <div className="login-box">
         <h1 className="font">Westagram</h1>
-
         <form action="">
           <input
             type="text"
@@ -27,19 +31,20 @@ function LoginJw() {
             placeholder="비밀번호"
             id="pw"
             className="input"
-            onChange={saveUserId}
+            onChange={saveUserPw}
           />
         </form>
-
+        {/* {id.includes('@') ? setBtn('blue') : null} */}
         <button
-          className="login-btn"
+          className={
+            id.includes('@') && pw.length >= 5 ? 'login-on' : 'login-btn'
+          }
           onClick={() => {
-            navigate('/main');
+            navigate('/mainjw');
           }}
         >
           로그인
         </button>
-
         <div className="repassword">
           <a href="">비밀번호를 잊으셨나요?</a>
         </div>

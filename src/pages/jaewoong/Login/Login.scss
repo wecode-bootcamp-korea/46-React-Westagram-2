@@ -1,11 +1,18 @@
 $border: 2px solid #ebebeb;
-@mixin input_button {
+@mixin inputs-buttons {
   display: block;
   width: 90%;
   margin: 20px auto;
   padding: 20px;
   border-radius: 5px;
   font-size: 20px;
+}
+
+@mixin btn {
+  margin-top: 30px;
+  border: none;
+  color: white;
+  font-weight: bold;
 }
 
 .container {
@@ -22,18 +29,21 @@ $border: 2px solid #ebebeb;
   }
 
   input {
-    @include input_button;
+    @include inputs-buttons;
     border: $border;
     background-color: #f8f8f8;
   }
 
   .login-btn {
-    @include input_button;
-    margin-top: 30px;
-    border: none;
+    @include inputs-buttons;
+    @include btn;
     background-color: #c4e1fb;
-    color: white;
-    font-weight: bold;
+  }
+
+  .login-on {
+    @include inputs-buttons;
+    @include btn;
+    background-color: blue;
   }
 
   .repassword {
@@ -45,9 +55,5 @@ $border: 2px solid #ebebeb;
     color: #0a3c6e;
     font-size: 25px;
     text-decoration: none;
-  }
-
-  .login-on {
-    background-color: blue;
   }
 }
