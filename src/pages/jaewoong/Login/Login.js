@@ -38,7 +38,9 @@ function LoginJw() {
             id.includes('@') && pw.length >= 5 ? 'login-on' : 'login-btn'
           }
           onClick={() => {
-            navigate('/mainjw');
+            id.includes('@') && pw.length >= 5
+              ? navigate('/mainjw')
+              : navigate('/loginjw');
           }}
         >
           로그인
