@@ -1,8 +1,31 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
+import CommentList from '../../../components/Nav/CommentList';
 import './mainMj.scss';
 
 function MainMj() {
+  let [comment, setComment] = useState('');
+  let [commentArr, setCommentArr] = useState([]);
+
+  const commentInput = event => {
+    setComment(event.target.value);
+  };
+
+  const onSubmit = event => {
+    event.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    setCommentArr([...commentArr, comment]);
+    setComment('');
+  };
+
+  const onKeyPress = event => {
+    if (event.key === 'Enter') {
+      onSubmit(event);
+    }
+  };
+
   return (
     <>
       <header>
@@ -68,15 +91,16 @@ function MainMj() {
             <div className="likeLeft">
               <img src="../../../images/minjeong/tree.png" alt="tree" />
               <p>
-                <strong>groot.IAM</strong>님 외 <strong>20</strong>명이
-                좋아합니다.
+                <strong className="bold">groot.IAM</strong>님 외{' '}
+                <strong>20</strong>명이 좋아합니다.
               </p>
             </div>
             <div className="CommentWrap">
               <div className="feedText">
                 <div className="repl">
                   <p className="comments">
-                    <strong>Star_Lord_Quill</strong> 귀엽네...
+                    <strong className="bold">Star_Lord_Quill</strong>
+                    &nbsp;&nbsp;&nbsp;귀엽네...
                   </p>
                   <div className="delLike">
                     <img
@@ -91,7 +115,8 @@ function MainMj() {
 
                 <div className="repl">
                   <p className="comments">
-                    <strong>DraxDoesntDance</strong> 아주 귀여워..
+                    <strong className="bold">DraxDoesntDance</strong>
+                    &nbsp;&nbsp;&nbsp;아주 귀여워..
                   </p>
                   <div className="delLike">
                     <img
@@ -104,7 +129,11 @@ function MainMj() {
                   </div>
                 </div>
 
-                <ul id="comment-wrapper"></ul>
+                <ul>
+                  {commentArr.map((comment, i) => (
+                    <CommentList key={i} comment={comment} />
+                  ))}
+                </ul>
               </div>
               <p className="timeline">42분 전</p>
             </div>
@@ -114,9 +143,13 @@ function MainMj() {
                 type={'text'}
                 className="comment"
                 placeholder="댓글 달기..."
-                required
+                onChange={commentInput}
+                onKeyDown={onKeyPress}
+                value={comment}
               />
-              <button className="submit">게시</button>
+              <button className="submit" onClick={onSubmit}>
+                게시
+              </button>
             </div>
           </div>
         </section>
