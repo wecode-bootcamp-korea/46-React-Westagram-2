@@ -13,6 +13,7 @@ function MainJw() {
         let copy = [...saveComments];
         copy.push(comment);
         setSaveComments(copy);
+        e.target.value = '';
       }
     }
   }
@@ -155,6 +156,7 @@ function MainJw() {
                   let copy = [...saveComments];
                   copy.push(comment);
                   setSaveComments(copy);
+                  e.target.previousElementSibling.value = '';
                 }
               }}
             >
