@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../../styles/common.scss';
 import './Main.scss';
+import Comment from './Comment';
 
 const Main = () => {
   const [comment, setComment] = useState('');
@@ -19,15 +20,6 @@ const Main = () => {
     }
   };
 
-  const showCommentList = commentArray.map((comment, index) => (
-    <li className="showCommentList" key={index}>
-      <span>{comment}</span>
-      <span>
-        <span>❤️</span>
-        <button>X</button>
-      </span>
-    </li>
-  ));
   return (
     <>
       <meta charSet="UTF-8" />
@@ -115,7 +107,9 @@ const Main = () => {
                 <span>님 외 9명이 좋아합니다.</span>
               </div>
             </div>
-            <ul className="feeds__comment">{showCommentList}</ul>
+            <ul className="feeds__comment">
+              <Comment comment={comment} commentArray={commentArray} />
+            </ul>
             <form
               onClick={e => {
                 e.preventDefault();
