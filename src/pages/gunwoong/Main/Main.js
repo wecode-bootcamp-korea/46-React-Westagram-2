@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../../styles/common.scss';
 import './Main.scss';
 
 const Main = () => {
+  const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+
+  const onChangeInput = e => {
+    setComment(e.target.value);
+  };
+
+  const createComment = e => {
+    if (comment.trim() !== '') {
+      let newCommentArray = [...commentArray];
+      newCommentArray.push(comment);
+      setCommentArray(newCommentArray);
+      setComment('');
+    }
+  };
+
+  const showCommentList = commentArray.map((comment, index) => (
+    <li className="showCommentList" key={index}>
+      <span>{comment}</span>
+      <span>
+        <span>❤️</span>
+        <button>X</button>
+      </span>
+    </li>
+  ));
   return (
     <>
       <meta charSet="UTF-8" />
@@ -17,7 +42,7 @@ const Main = () => {
       />
       <link rel="stylesheet" href="style/common.css" />
       <link rel="stylesheet" href="style/main.css" />
-      <nav>
+      <nav id="main-nav">
         <div className="logo-wrap nav-width">
           <img
             className="logo-wrap__logo"
@@ -89,17 +114,27 @@ const Main = () => {
               <div className="feeds__likes-wrap__text">
                 <span>님 외 9명이 좋아합니다.</span>
               </div>
-              {/* 하트를 누르면 인원수가 +1 */}
             </div>
-            {/* 아래부터 댓글 기능 구현하기 */}
-            <ul className="feeds__comment" />
-            <form>
+            <ul className="feeds__comment">{showCommentList}</ul>
+            <form
+              onClick={e => {
+                e.preventDefault();
+              }}
+            >
               <input
                 className="feeds__comment__input"
                 type="text"
                 placeholder="댓글 달기..."
+                value={comment}
+                onChange={onChangeInput}
               />
-              <button className="feeds__comment__button" hidden />
+              <button
+                className="feeds__comment__button"
+                hidden
+                onClick={() => {
+                  createComment();
+                }}
+              />
             </form>
           </div>
         </article>
