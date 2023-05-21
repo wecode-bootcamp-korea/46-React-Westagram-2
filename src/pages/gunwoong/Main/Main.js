@@ -11,6 +11,7 @@ const Main = () => {
     setComment(e.target.value);
   };
 
+  //삼항연산자 사용해서 &&연산자로 바꾸기
   const createComment = e => {
     if (comment.trim() !== '') {
       let newCommentArray = [...commentArray];
@@ -125,9 +126,7 @@ const Main = () => {
               <button
                 className="feeds__comment__button"
                 hidden
-                onClick={() => {
-                  createComment();
-                }}
+                onClick={createComment}
               />
             </form>
           </div>
