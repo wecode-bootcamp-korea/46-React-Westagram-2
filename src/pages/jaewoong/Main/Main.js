@@ -13,7 +13,7 @@ function MainJw() {
         let copy = [...saveComments];
         copy.push(comment);
         setSaveComments(copy);
-        e.target.value = '';
+        setComment('');
       }
     }
   }
@@ -29,9 +29,7 @@ function MainJw() {
             />
           </div>
           <div>
-            <p className="font" style={{ fontSize: '25px', marginBottom: '0' }}>
-              Westagram
-            </p>
+            <p className="westa-font">Westagram</p>
           </div>
           <div style={{ flexGrow: '2' }}>
             <input type="text" placeholder="검색" className="search" />
@@ -126,8 +124,8 @@ function MainJw() {
             </div>
 
             <div className="content-reply">
-              {saveComments.map((a, i) => {
-                return <Comment key={i} saveComments={a} />;
+              {saveComments.map((comment, i) => {
+                return <Comment key={i} saveComments={comment} />;
               })}
             </div>
             <p className="time">
@@ -140,6 +138,7 @@ function MainJw() {
               type="text"
               placeholder="댓글 달기..."
               className="reply"
+              value={comment}
               onChange={e => {
                 setComment(e.target.value);
               }}
@@ -156,7 +155,7 @@ function MainJw() {
                   let copy = [...saveComments];
                   copy.push(comment);
                   setSaveComments(copy);
-                  e.target.previousElementSibling.value = '';
+                  setComment('');
                 }
               }}
             >
@@ -305,10 +304,10 @@ function MainJw() {
   );
 }
 
-const Comment = props => {
+const Comment = ({ saveComments }) => {
   return (
     <div className="template">
-      <p>{props.saveComments}</p>
+      <p>{saveComments}</p>
       <div>
         <button className="setting-reply heart">
           <i className="fa-solid fa-heart" />

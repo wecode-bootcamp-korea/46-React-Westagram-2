@@ -1,18 +1,21 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 import '../../../styles/common.scss';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 function LoginJw() {
   let [id, setId] = useState('');
   let [pw, setPw] = useState('');
   const navigate = useNavigate();
+
   const saveUserId = e => {
     setId(e.target.value);
   };
+
   const saveUserPw = e => {
     setPw(e.target.value);
   };
+
   return (
     <div className="container">
       <div className="login-box">
