@@ -1,6 +1,8 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 import CommentList from '../../../components/Nav/CommentList';
+import { WESTAGRAM_ASIDE_LIST } from '../../../uiData';
+
 import './mainMj.scss';
 
 function MainMj() {
@@ -254,9 +256,9 @@ function MainMj() {
           </div>
           <footer className="footerWrap">
             <div className="info">
-              <p>Instagram 정보 · 지원 · 홍보센터 · API · </p>
-              <p>채용정보 개인정보처리방침 · 약관 ·</p>
-              <p>디렉터리 · 프로필 · 해시태그 · 언어</p>
+              {WESTAGRAM_ASIDE_LIST.map(asideList => {
+                return <span key={asideList.id}>{asideList.text}</span>;
+              })}
             </div>
             <p>ⓒ 2023 WESTAGRAM</p>
           </footer>
