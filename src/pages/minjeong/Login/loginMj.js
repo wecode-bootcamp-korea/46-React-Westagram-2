@@ -1,17 +1,16 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import './loginMj.scss';
 import { useNavigate } from 'react-router-dom';
+import './loginMj.scss';
 
 function LoginMj() {
   const navigate = useNavigate();
-  let [id, setId] = useState('');
-  let [pw, setPw] = useState('');
-  let [isValid, setIsValid] = useState(false);
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+  const [isValid, setIsValid] = useState(false);
 
   function saveUserId(event) {
     setId(event.target.value);
-    console.log('id :', id);
   }
 
   function saveUserPw(event) {
@@ -26,18 +25,18 @@ function LoginMj() {
   const isActive = id.includes('@') && pw.length >= 5;
 
   return (
-    <div className="Login">
+    <div className="login">
       <div className="inputBox">
         <p className="westagram">Westagram</p>
         <input
           className="inputId"
-          type={'text'}
+          type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={saveUserId}
         />
         <input
           className="inputPw"
-          type={'password'}
+          type="password"
           placeholder="비밀번호"
           onChange={saveUserPw}
         />
