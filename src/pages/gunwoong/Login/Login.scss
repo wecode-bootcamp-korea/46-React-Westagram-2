@@ -3,20 +3,18 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixin.scss';
 
-.container {
+.loginGw {
   border: 1px solid;
   height: 100vh;
   margin: 300px;
   margin-top: 0;
-
-  h1 {
-    font-family: 'Lobster', cursive;
-    text-align: center;
-    font-size: 80px;
-    margin-bottom: 150px;
-  }
 }
-
+h1.logoText {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 150px;
+}
 .login {
   @include flexSort(center, center);
   flex-direction: column;

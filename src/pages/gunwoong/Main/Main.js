@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../../../styles/common.scss';
-import './Main.scss';
 import Comment from './Comment';
+import './Main.scss';
+import '../../../styles/common.scss';
 
 const Main = () => {
   const [comment, setComment] = useState('');
@@ -23,18 +23,6 @@ const Main = () => {
 
   return (
     <>
-      <meta charSet="UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>main</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-        rel="preconnect"
-      />
-      <link rel="stylesheet" href="style/common.css" />
-      <link rel="stylesheet" href="style/main.css" />
       <nav id="main-nav">
         <div className="logo-wrap nav-width">
           <img
