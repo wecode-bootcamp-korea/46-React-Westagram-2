@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
+import ASIDE_INFO from './mainFooterData';
 import './Main.scss';
 import '../../../styles/common.scss';
 
@@ -248,15 +249,15 @@ const Main = () => {
             </ul>
           </section>
           <footer>
-            <div className="footer-info">
-              <span>
-                Instagram 정보·지원·홍보
-                센터·API·채용정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어
-              </span>
-              <br />
-              <br />
-              <span>© 2019 INSTAGRAM</span>
-            </div>
+            {ASIDE_INFO.map(info => (
+              <div className="footer-info" key={info.id}>
+                <span className='className="footer-info"'>{info.first}</span>
+                <br />
+                <br />
+                <br />
+                <span className="footer-info">{info.second}</span>
+              </div>
+            ))}
           </footer>
         </aside>
       </main>
