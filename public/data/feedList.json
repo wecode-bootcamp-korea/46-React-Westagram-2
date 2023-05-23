@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "rocket.racoon",
+    "profile": "../../../images/minjeong/circe-denyer-W_8Tivmufmo-unsplash.png",
+    "feedImg": "../../../images/minjeong/racoon.png",
+    "likeImg": "../../../images/minjeong/tree.png",
+    "likeId": "groot.IAM",
+    "commentName1": "Star_Lord_Quill",
+    "comment1": "귀엽네...",
+    "commentName2": "DraxDoesntDance",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 2,
+    "name": "Rabbit.floor",
+    "profile": "../../../images/minjeong/rabbit.png",
+    "feedImg": "../../../images/minjeong/lucy-m-KNMbRhf5IT8-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/tree.png",
+    "likeId": "rocket.racoon",
+    "commentName1": "groot.IAM",
+    "comment1": "깡총깡총",
+    "commentName2": "Star_Lord_Quill",
+    "comment2": "🥕.."
+  },
+  {
+    "id": 3,
+    "name": "Baby_rocket",
+    "profile": "../../../images/minjeong/babyy.png",
+    "feedImg": "../../../images/minjeong/athena-rebel-OvEbsy26IvA-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/tree.png",
+    "likeId": "Rabbit.floor",
+    "commentName1": "rocket.racoon",
+    "comment1": "귀엽네...",
+    "commentName2": "groot.IAM",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 4,
+    "name": "otter._.bros",
+    "profile": "../../../images/minjeong/수달스.png",
+    "feedImg": "../../../images/minjeong/mana5280-axqTLZ12Jss-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/tree.png",
+    "likeId": "Baby_rocket",
+    "commentName1": "Rabbit.floor",
+    "comment1": "👏👏👏👏👏👏",
+    "commentName2": "rocket.racoon",
+    "comment2": "박수~!~!~!"
+  },
+  {
+    "id": 5,
+    "name": "dogggy_DOG",
+    "profile": "../../../images/minjeong/puppy.png",
+    "feedImg": "../../../images/minjeong/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/수달스.png",
+    "likeId": "otter._.bros",
+    "commentName1": "Baby_rocket",
+    "comment1": "사진 잘 나왔네",
+    "commentName2": "Rabbit.floor",
+    "comment2": "분홍색 잘 받네"
+  },
+  {
+    "id": 6,
+    "name": "Run.joaaaa",
+    "profile": "../../../images/minjeong/dogrun.png",
+    "feedImg": "../../../images/minjeong/ralu-gal-G8cB8hY3yvU-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/puppy.png",
+    "likeId": "dogggy_DOG",
+    "commentName1": "otter._.bros",
+    "comment1": "귀엽네...",
+    "commentName2": "Baby_rocket",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 7,
+    "name": "kittyTheCat",
+    "profile": "../../../images/minjeong/manja-vitolic-gKXKBY-C-Dk-unsplash.png",
+    "feedImg": "../../../images/minjeong/amber-kipp-75715CVEJhI-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/dogrun.png",
+    "likeId": "Run.joaaaa",
+    "commentName1": "dogggy_DOG",
+    "comment1": "귀엽네...",
+    "commentName2": "otter._.bros",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 8,
+    "name": "Star_Lord_Quill",
+    "profile": "../../../images/minjeong/star.png",
+    "feedImg": "../../../images/minjeong/ivana-cajina-asuyh-_ZX54-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/manja-vitolic-gKXKBY-C-Dk-unsplash.png",
+    "likeId": "kittyTheCat",
+    "commentName1": "Run.joaaaa",
+    "comment1": "귀엽네...",
+    "commentName2": "dogggy_DOG",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 9,
+    "name": "DraxDoesntDance",
+    "profile": "../../../images/minjeong/drax.png",
+    "feedImg": "../../../images/minjeong/boxed-water-is-better-YMhxUVVUUCA-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/star.png",
+    "likeId": "Star_Lord_Quill",
+    "commentName1": "kittyTheCat",
+    "comment1": "귀엽네...",
+    "commentName2": "Run.joaaaa",
+    "comment2": "귀여워.."
+  },
+  {
+    "id": 10,
+    "name": "groot.IAM",
+    "profile": "../../../images/minjeong/tree.png",
+    "feedImg": "../../../images/minjeong/jon-moore-_2MyZDsUSM4-unsplash.jpg",
+    "likeImg": "../../../images/minjeong/drax.png",
+    "likeId": "DraxDoesntDance",
+    "commentName1": "Star_Lord_Quill",
+    "comment1": "귀엽네...",
+    "commentName2": "kittyTheCat",
+    "comment2": "귀여워.."
+  }
+]

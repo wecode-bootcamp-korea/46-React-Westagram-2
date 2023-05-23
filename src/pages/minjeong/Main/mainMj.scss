@@ -50,8 +50,8 @@ article {
 
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 
 section {
@@ -59,8 +59,8 @@ section {
 }
 
 .page {
-  display: flex;
   margin-top: 70px;
+  display: flex;
 }
 
 .searchBar {
@@ -93,9 +93,14 @@ section {
   justify-content: space-between;
 }
 
-.feedLeft {
-  width: 500px;
-  border: 1px solid lightgray;
+.feedWrap {
+  display: flex;
+  flex-direction: column;
+
+  .feedLeft {
+    width: 500px;
+    border: 1px solid lightgray;
+  }
 }
 
 .top {
@@ -138,11 +143,11 @@ section {
 .feedImg {
   width: 500px;
   height: 600px;
-
   img {
     width: 500px;
     height: 600px;
     background-size: auto;
+    object-fit: cover;
   }
 }
 
@@ -227,7 +232,6 @@ section {
 
 .feedRight {
   float: right;
-  margin-left: 20px;
   background-color: transparent;
 
   .profileImg {
@@ -235,6 +239,10 @@ section {
     height: 30px;
     margin-left: 10px;
     margin-bottom: 20px;
+  }
+
+  .rightright {
+    margin-right: -5px;
   }
 }
 
