@@ -1,6 +1,7 @@
+import { useState } from 'react';
+import { ASIDE_INFO_LIST } from './data';
 import './Main.scss';
 import '../../../styles/common.scss';
-import { useState } from 'react';
 
 function MainJw() {
   let [comment, setComment] = useState('');
@@ -291,12 +292,9 @@ function MainJw() {
             </div>
           </div>
           <div className="infor">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              odit, pariatur adipisci exercitationem dolores eum reiciendis vel
-              aliquam porro totam doloremque voluptatem temporibus incidunt
-              blanditiis velit animi? Totam, sit eius.
-            </p>
+            {ASIDE_INFO_LIST.map(info => (
+              <span key={info.id}>{info.text}</span>
+            ))}
           </div>
         </div>
       </main>
