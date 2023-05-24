@@ -1,20 +1,33 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
-import CommentList from '../../../components/Nav/CommentList';
 import { WESTAGRAM_ASIDE_LIST } from '../../../uiData';
-
+import CommentList from '../../../components/Nav/CommentList';
 import './mainMj.scss';
 
 function MainMj() {
   const [comment, setComment] = useState('');
   const [commentArr, setCommentArr] = useState([]);
   const [feedinfoList, setFeedInfoList] = useState([]);
+  const [recomend, setRecomend] = useState([]);
+  const [storyList, setStoryList] = useState([]);
 
   useEffect(() => {
     fetch('/data/feedList.json')
       .then(response => response.json())
       .then(result => setFeedInfoList(result));
   }, []);
+
+  useEffect(() => {
+    fetch('/data/recomendList.json')
+      .then(response => response.json())
+      .then(result => setRecomend(result));
+  }, []);
+
+  useEffect(() => {
+    fetch('data/storyList.json')
+      .then(response => response.json())
+      .then(result => setStoryList(result));
+  });
 
   const commentInput = event => {
     setComment(event.target.value);
@@ -54,23 +67,15 @@ function MainMj() {
           </div>
 
           <div className="icons">
-            <img
-              className="serching"
-              alt="탐색"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-            />
-
-            <img
-              className="heart"
-              alt="하트"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-            />
-
-            <img
-              className="mypage"
-              alt="마이페이지"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-            />
+            {ICON_LIST.map(iconinfo => {
+              return (
+                <img
+                  className={iconinfo.name}
+                  alt={iconinfo.alt}
+                  src={iconinfo.src}
+                />
+              );
+            })}
           </div>
         </nav>
       </header>
@@ -195,41 +200,21 @@ function MainMj() {
                 <p>모두보기</p>
               </div>
 
-              <div className="story">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/rabbit.png"
-                  alt="rabbit"
-                />
-                <div className="storyText">
-                  <p className="bold">Rabbit.floor</p>
-                  <p className="lightcolor">33분 전</p>
-                </div>
-              </div>
-
-              <div className="story">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/babyy.png"
-                  alt="babies"
-                />
-                <div className="storyText">
-                  <p className="bold">Baby_rocket</p>
-                  <p className="lightcolor">45분 전</p>
-                </div>
-              </div>
-
-              <div className="story">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/수달스.png"
-                  alt="otters"
-                />
-                <div className="storyText">
-                  <p className="bold">otter._.bros</p>
-                  <p className="lightcolor">1시간 전</p>
-                </div>
-              </div>
+              {storyList.map(stotyInfo => {
+                return (
+                  <div className="story">
+                    <img
+                      className="profileImg"
+                      src={stotyInfo.src}
+                      alt={stotyInfo.alt}
+                    />
+                    <div className="storyText">
+                      <p className="bold">{stotyInfo.name}</p>
+                      <p className="lightcolor">{stotyInfo.time}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="sideDown">
@@ -238,41 +223,18 @@ function MainMj() {
                 <p>모두 보기</p>
               </div>
 
-              <div className="recomend">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/puppy.png"
-                />
-                <div className="storyText">
-                  <p className="bold">dogggy_DOG</p>
-                  <p className="lightcolor">Rabbit.floor님 외 2명이...</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
-
-              <div className="recomend">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/dogrun.png"
-                />
-                <div className="storyText">
-                  <p className="bold">Run.joaaaa</p>
-                  <p className="lightcolor">Baby_rocket님 외 4명이...</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
-
-              <div className="recomend">
-                <img
-                  className="profileImg"
-                  src="../../../images/minjeong/manja-vitolic-gKXKBY-C-Dk-unsplash.png"
-                />
-                <div className="storyText">
-                  <p className="bold">kittyTheCat</p>
-                  <p className="lightcolor">otter._.bros님 외 1명이...</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
+              {recomend.map(recomend => {
+                return (
+                  <div className="recomend">
+                    <img className="profileImg" src={recomend.src} />
+                    <div className="storyText">
+                      <p className="bold">{recomend.name}</p>
+                      <p className="lightcolor">{recomend.recomend}</p>
+                    </div>
+                    <button className="follow">팔로우</button>
+                  </div>
+                );
+              })}
             </div>
             <footer className="footerWrap">
               <div className="info">
@@ -290,3 +252,24 @@ function MainMj() {
 }
 
 export default MainMj;
+
+const ICON_LIST = [
+  {
+    id: 1,
+    className: 'serching',
+    alt: '탐색',
+    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png',
+  },
+  {
+    id: 2,
+    className: 'serching',
+    alt: '하트',
+    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png',
+  },
+  {
+    id: 3,
+    className: 'serching',
+    alt: '마이페이지',
+    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png',
+  },
+];
