@@ -42,6 +42,7 @@ nav#main-nav {
     height: 40px;
     margin-top: 30px;
     border-radius: 5px;
+    text-align: center;
   }
 }
 .searchPopUp {
@@ -81,17 +82,12 @@ nav#main-nav {
   margin-right: 10px;
 }
 
-main {
-  display: flex;
-  width: 90vw;
-  height: 90vh;
-  margin: 0 5%;
-}
 .feeds {
-  width: 60%;
+  width: 80%;
   height: 100%;
   margin-left: 70px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 5%;
 }
 .feeds__header {
   display: flex;
@@ -123,19 +119,23 @@ main {
 }
 .feeds__bottom-icons {
   display: flex;
+  width: 10px;
+  height: 30px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: left;
   padding: 0 20px;
+
+  i {
+    margin-left: 30px;
+  }
+  i:first-child {
+    margin-left: 0;
+  }
+  .fa-heart {
+    color: red;
+  }
 }
-.feeds__bottom-icons i:nth-child(-n + 2) {
-  margin-right: 20px;
-}
-.fa-heart .fa-regular {
-  color: red;
-}
-.feeds__bottom-icons i:last-child {
-  margin-left: auto;
-}
+
 .feeds__comment__input {
   padding: 0 30px;
   border: 0px;
@@ -262,9 +262,23 @@ aside.main-aside {
 .logout-div {
   @include widthHeight(100px, 100px);
 }
-.feeds__comment {
+.feeds__comment-wrap {
   .showCommentList {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.feed-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#container {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 5%;
+  justify-content: space-between;
 }

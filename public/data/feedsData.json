@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "img": "./images/gunwoong/IMG_3734.JPG",
+    "userId": "wecode_bootcamp",
+    "place": "WeCode - 위코드",
+    "feedsImg": "./images/gunwoong/1.jpg",
+    "content": "댓글1"
+  },
+  {
+    "id": "2",
+    "img": "./images/gunwoong/IMG_3734.JPG",
+    "userId": "wecode_bootcamp",
+    "place": "WeCode - 위코드",
+    "feedsImg": "./images/gunwoong/2.png",
+    "content": "댓글2"
+  },
+  {
+    "id": "3",
+    "img": "./images/gunwoong/IMG_3734.JPG",
+    "userId": "wecode_bootcamp",
+    "place": "WeCode - 위코드",
+    "feedsImg": "./images/gunwoong/3.png",
+    "content": "댓글3"
+  }
+]

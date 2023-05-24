@@ -12,5 +12,4 @@ const Comment = ({ comment, commentArray }) => {
   ));
   return showCommentList;
 };
-
 export default Comment;
