@@ -1,23 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ASIDE_INFO_LIST } from './data';
+import Feed from './Feed';
 import './Main.scss';
 import '../../../styles/common.scss';
 
 function MainJw() {
-  let [comment, setComment] = useState('');
-  let [saveComments, setSaveComments] = useState([]);
-  function createComment(e) {
-    if (e.key === 'Enter') {
-      if (comment === '') {
-        e.preventDefault();
-      } else {
-        let copy = [...saveComments];
-        copy.push(comment);
-        setSaveComments(copy);
-        setComment('');
-      }
-    }
-  }
+  let [feedData, setFeedData] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/data.json', { method: 'GET' })
+      .then(res => res.json())
+      .then(data => {
+        setFeedData(data);
+      });
+  }, []);
+
   return (
     <>
       <nav>
@@ -81,90 +78,11 @@ function MainJw() {
       </nav>
       <div className="speech-bubble search-result show" />
       <main>
-        <div className="main-left">
-          <div className="profile">
-            <div className="profile-img">
-              <img
-                src="/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg"
-                alt="profile-img"
-              />
-            </div>
-            <span>Jaewoong</span>
-          </div>
-
-          <div className="feed-img">
-            <img
-              src="/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg"
-              alt="profile-img"
-            />
-          </div>
-
-          <div className="feed-content">
-            <div className="content-menu">
-              <div className="left">
-                <i className="fa-solid fa-heart" />
-                <i className="fa-regular fa-comment" />
-                <i className="fa-solid fa-arrow-up-from-bracket" />
-              </div>
-              <div className="right">
-                <i className="fa-regular fa-bookmark" />
-              </div>
-            </div>
-
-            <div className="content-like">
-              <div>
-                <img
-                  src="/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg"
-                  alt="feed-img"
-                  className="img"
-                />
-              </div>
-              <div>
-                <span>Awer</span>님 외<span>10</span>명이 좋아합니다
-              </div>
-            </div>
-
-            <div className="content-reply">
-              {saveComments.map((comment, i) => {
-                return <Comment key={i} saveComments={comment} />;
-              })}
-            </div>
-            <p className="time">
-              <span>42</span>분 전
-            </p>
-          </div>
-
-          <div className="reply-box">
-            <input
-              type="text"
-              placeholder="댓글 달기..."
-              className="reply"
-              value={comment}
-              onChange={e => {
-                setComment(e.target.value);
-              }}
-              onKeyPress={e => {
-                createComment(e);
-              }}
-            />
-            <button
-              className="btn upload"
-              onClick={e => {
-                if (comment === '') {
-                  e.preventDefault();
-                } else {
-                  let copy = [...saveComments];
-                  copy.push(comment);
-                  setSaveComments(copy);
-                  setComment('');
-                }
-              }}
-            >
-              게시
-            </button>
-          </div>
+        <div className="main-box">
+          {feedData.map(info => {
+            return <Feed key={info.id} info={info} />;
+          })}
         </div>
-
         <div className="main-right">
           <div className="wecode-profile">
             <div className="wecode-img">
@@ -295,25 +213,12 @@ function MainJw() {
             {ASIDE_INFO_LIST.map(info => (
               <span key={info.id}>{info.text}</span>
             ))}
+            <p>ⓒ 2023 WESTAGRAM</p>
           </div>
         </div>
       </main>
     </>
   );
 }
-
-const Comment = ({ saveComments }) => {
-  return (
-    <div className="template">
-      <p>{saveComments}</p>
-      <div>
-        <button className="setting-reply heart">
-          <i className="fa-solid fa-heart" />
-        </button>
-        <button className="setting-reply delete">삭제</button>
-      </div>
-    </div>
-  );
-};
 
 export default MainJw;
