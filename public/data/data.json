@@ -1,0 +1,49 @@
+[
+{
+    "id": 1,
+    "name": "bbogle",
+    "profileImg": "/images/jaewoong/bbogle.jpeg",
+    "feedImg": "/images/jaewoong/bbogle.jpeg",
+    "likeImg": "/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg",
+    "likeId": "wework",
+    "commentName1": "woong",
+    "comment1": "강뽀글",
+    "commentName2": "wecode",
+    "comment2": "귀엽다"
+  },
+  {
+    "id": 2,
+    "name": "wecode",
+    "profileImg": "/images/jaewoong/wecode.png",
+    "feedImg": "/images/jaewoong/wecode.png",
+    "likeImg": "/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg",
+    "likeId": "wework",
+    "commentName1": "wecode",
+    "comment1": "46기",
+    "commentName2": "wecode2",
+    "comment2": "이재웅"
+  },
+  {
+    "id": 3,
+    "name": "wework",
+    "profileImg": "/images/jaewoong/zebra.jpg",
+    "feedImg": "/images/jaewoong/zebra.jpg",
+    "likeImg": "/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg",
+    "likeId": "wework",
+    "commentName1": "wecode",
+    "comment1": "46기",
+    "commentName2": "wecode2",
+    "comment2": "이재웅"
+  },
+  {
+    "id": 4,
+    "name": "wework",
+    "profileImg": "/images/jaewoong/zebra.jpg",
+    "feedImg": "/images/jaewoong/zebra.jpg",
+    "likeImg": "/images/jaewoong/alex-shuper-Xw5goPB4yws-unsplash.jpg",
+    "likeId": "wework",
+    "commentName1": "wecode",
+    "comment1": "46기",
+    "commentName2": "wecode2",
+    "comment2": "이재웅"
+  }]
