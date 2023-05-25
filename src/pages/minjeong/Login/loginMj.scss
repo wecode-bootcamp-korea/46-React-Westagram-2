@@ -1,28 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import '../../../styles/mixxin.scss';
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   font-family: 'Noto Sans KR', sans-serif;
   background-color: whitesmoke;
 }
 
 .login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   width: 700px;
   height: 760px;
   border: 1px solid lightgray;
 
   .westagram {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     font-family: 'Lobster', cursive;
     font-size: 100px;
     margin-top: 50px;

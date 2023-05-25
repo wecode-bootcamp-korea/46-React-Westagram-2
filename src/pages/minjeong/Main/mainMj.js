@@ -1,8 +1,9 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
-import { WESTAGRAM_ASIDE_LIST } from '../../../uiData';
 import CommentList from '../../../components/Nav/CommentList';
 import Comment from '../../../components/Nav/Comment';
+import { WESTAGRAM_ASIDE_LIST } from '../../../uiData';
+import { ICON_LIST } from '../../../components/Nav/IconList';
 import './mainMj.scss';
 
 function MainMj() {
@@ -127,41 +128,6 @@ function MainMj() {
                           comment2={feedinfo.comment2}
                         />
 
-                        {/* <div className="repl">
-                          <p className="comments">
-                            <strong className="bold">
-                              {feedinfo.commentName1}
-                            </strong>
-                            {feedinfo.comment1}
-                          </p>
-                          <div className="delLike">
-                            <img
-                              src="../../../images/minjeong/emptyheart.png"
-                              alt="empty"
-                            />
-                            <button className="deletebtn" type="button">
-                              삭제
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="repl">
-                          <p className="comments">
-                            <strong className="bold">
-                              {feedinfo.commentName2}
-                            </strong>
-                            {feedinfo.comment2}
-                          </p>
-                          <div className="delLike">
-                            <img
-                              src="../../../images/minjeong/emptyheart.png"
-                              alt="empty"
-                            />
-                            <button className="deletebtn" type="button">
-                              삭제
-                            </button>
-                          </div>
-                        </div> */}
                         <ul>
                           {commentArr.map((comment, index) => (
                             <CommentList
@@ -271,24 +237,3 @@ function MainMj() {
 }
 
 export default MainMj;
-
-const ICON_LIST = [
-  {
-    id: 1,
-    className: 'serching',
-    alt: '탐색',
-    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png',
-  },
-  {
-    id: 2,
-    className: 'serching',
-    alt: '하트',
-    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png',
-  },
-  {
-    id: 3,
-    className: 'serching',
-    alt: '마이페이지',
-    src: 'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png',
-  },
-];
