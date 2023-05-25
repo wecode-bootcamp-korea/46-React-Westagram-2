@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "rocket.racoon",
-    "profile": "../../../images/minjeong/circe-denyer-W_8Tivmufmo-unsplash.png",
-    "feedImg": "../../../images/minjeong/racoon.png",
+    "profile": "/images/minjeong/circe-denyer-W_8Tivmufmo-unsplash.png",
+    "feedImg": "/images/minjeong/racoon.png",
     "likeImg": "../../../images/minjeong/tree.png",
     "likeId": "groot.IAM",
     "commentName1": "Star_Lord_Quill",

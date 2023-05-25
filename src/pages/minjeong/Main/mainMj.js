@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { WESTAGRAM_ASIDE_LIST } from '../../../uiData';
 import CommentList from '../../../components/Nav/CommentList';
+import Comment from '../../../components/Nav/Comment';
 import './mainMj.scss';
 
 function MainMj() {
@@ -38,6 +39,11 @@ function MainMj() {
     if (comment === '') {
       return;
     }
+    const newComment = {
+      id: commentArr.length + 1,
+      comment: comment,
+      name: '사용자명',
+    };
     setCommentArr([...commentArr, comment]);
     setComment('');
   };
@@ -112,7 +118,16 @@ function MainMj() {
                     </div>
                     <div className="CommentWrap">
                       <div className="feedText">
-                        <div className="repl">
+                        <Comment
+                          feedinfoList={feedinfoList}
+                          setFeedInfoList={setFeedInfoList}
+                          commentName1={feedinfo.commentName1}
+                          comment1={feedinfo.comment1}
+                          commentName2={feedinfo.commentName2}
+                          comment2={feedinfo.comment2}
+                        />
+
+                        {/* <div className="repl">
                           <p className="comments">
                             <strong className="bold">
                               {feedinfo.commentName1}
@@ -146,11 +161,15 @@ function MainMj() {
                               삭제
                             </button>
                           </div>
-                        </div>
-
+                        </div> */}
                         <ul>
-                          {commentArr.map((comment, i) => (
-                            <CommentList key={i} comment={comment} />
+                          {commentArr.map((comment, index) => (
+                            <CommentList
+                              key={comment.id}
+                              id={comment.id}
+                              comment={comment.comment}
+                              account={comment.name}
+                            />
                           ))}
                         </ul>
                       </div>

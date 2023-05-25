@@ -38,6 +38,34 @@ function LoginMj() {
   ];
   const isActive = id.includes('@') && pw.length >= 5;
 
+  const handleButton = () => {
+    fetch('http://10.58.52.71:3000/users/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(res => {
+        if (res.status !== 500) {
+          return res.json();
+        }
+        throw new Error('통신 실패!');
+      })
+      .then(data => {
+        console.log(data);
+        if (data.message === 'INVALID_USER') {
+          alert('로그인 실패!');
+        } else {
+          alert('로그인 성공!');
+          localStorage.setItem('TOKEN', data.token);
+          navigate('/mainMJ');
+        }
+      })
+      .catch(error => console.log(error));
+  };
+
   return (
     <div className="login">
       <div className="inputBox">
@@ -45,6 +73,7 @@ function LoginMj() {
         {INPUT_DATA.map(info => {
           return (
             <input
+              key={info.id}
               className={info.className}
               type={info.type}
               placeholder={info.placeholder}
@@ -54,7 +83,7 @@ function LoginMj() {
         })}
 
         <button
-          onClick={goToMain}
+          onClick={handleButton}
           className={isActive ? 'abledButton' : 'disabled'}
           type="button"
           disabled={!isActive}
@@ -68,3 +97,5 @@ function LoginMj() {
 }
 
 export default LoginMj;
+
+//
