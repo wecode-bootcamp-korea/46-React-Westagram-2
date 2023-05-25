@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "nameOne" : feedinfo.commentName1,
+    commentOne :  {feedinfo.comment1},
+    nameTwo : {feedinfo.commentName2},
+    commentTwo : {feedinfo.comment2}
+
+  }
+]

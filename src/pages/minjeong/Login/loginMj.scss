@@ -1,0 +1,68 @@
+@import '../../../styles/mixxin.scss';
+
+body {
+  @include flexCenter;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: whitesmoke;
+}
+
+.login {
+  @include flexCenter;
+  width: 700px;
+  height: 760px;
+  border: 1px solid lightgray;
+
+  .westagram {
+    @include flexCenter;
+    font-family: 'Lobster', cursive;
+    font-size: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  input {
+    border: 1px solid lightgray;
+    width: 600px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 7px 12px;
+    font-size: 26px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .disabled {
+    border: none;
+    border-radius: 5px;
+    width: 620px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #c4e1fb;
+    color: white;
+  }
+
+  .abledButton {
+    border: none;
+    border-radius: 5px;
+    width: 620px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #28a7d6;
+    color: white;
+  }
+}
+.inputBox {
+  a {
+    text-decoration: none;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    color: #395d86;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}

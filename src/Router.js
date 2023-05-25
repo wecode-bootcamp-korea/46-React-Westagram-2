@@ -4,8 +4,8 @@ import MainJw from './pages/jaewoong/Main/Main';
 import LoginJw from './pages/jaewoong/Login/Login';
 import MainGw from './pages/gunwoong/Main/Main';
 import LoginGw from './pages/gunwoong/Login/Login';
-import MainMj from './pages/minjeong/Main/Main';
-import LoginMj from './pages/minjeong/Login/Login';
+import MainMj from './pages/minjeong/Main/mainMj';
+import LoginMj from './pages/minjeong/Login/loginMj';
 import Nav from './components/Nav/Nav';
 
 const Router = () => {

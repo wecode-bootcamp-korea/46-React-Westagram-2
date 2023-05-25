@@ -1,0 +1,366 @@
+body {
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(235, 233, 233);
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  .logo {
+    display: flex;
+    margin-left: 50px;
+    padding-right: 50px;
+    width: 300px;
+
+    .westagramImg {
+      margin: 3px 20px;
+      width: 25px;
+      height: 25px;
+    }
+
+    h3 {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+      height: 30px;
+      padding-left: 13px;
+      border-left: 1px solid black;
+    }
+  }
+}
+
+section {
+  background-color: white;
+}
+
+.page {
+  margin-top: 70px;
+  display: flex;
+}
+
+.searchBar {
+  margin-right: 80px;
+  width: 200px;
+
+  input {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    border: 1px solid rgba(218, 217, 217, 0.767);
+    background-color: transparent;
+    font-size: 15px;
+  }
+
+  img {
+    width: 13px;
+    height: 13px;
+    margin-left: 75px;
+    margin-top: 4px;
+    position: absolute;
+  }
+}
+
+.icons {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedWrap {
+  display: flex;
+  flex-direction: column;
+
+  .feedLeft {
+    border: 1px solid lightgray;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  border: 1px solid #ebecf0;
+  border-top: none;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+
+  .threeDots {
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .feedtop {
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      color: black;
+      height: 20px;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    .profile {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.feedImg {
+  width: 600px;
+  height: 600px;
+
+  img {
+    width: 600px;
+    height: 600px;
+    background-size: auto;
+    object-fit: cover;
+  }
+}
+
+.feedText {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.underLike {
+  margin-left: 8px;
+
+  .likeLeft {
+    display: flex;
+    margin-top: 10px;
+
+    p {
+      margin-left: 10px;
+      font-size: 13px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.side-right {
+  width: 300px;
+
+  .wecode {
+    display: flex;
+    background-color: transparent;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+      margin-right: 5px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .wecodeId {
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.lightcolor {
+  font-size: 13px;
+
+  color: darkgray;
+}
+
+.storyWrap {
+  margin-top: 15px;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.storyTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sideDown {
+  margin-top: 15px;
+  border: 1px solid lightgray;
+  background-color: white;
+
+  .recomend {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.feedRight {
+  width: 300px;
+  margin-left: 30px;
+  background-color: transparent;
+
+  .profileImg {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.story {
+  display: flex;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.storyText {
+  margin-left: 20px;
+}
+
+.follow {
+  display: flex;
+  justify-content: end;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.footerWrap {
+  color: darkgrey;
+  font-size: 12px;
+
+  p {
+    margin-bottom: 2px;
+  }
+}
+
+.Light {
+  color: darkgray;
+}
+
+.storyTop {
+  font-size: 13px;
+  padding: 10px 10px;
+}
+
+.CommentWrap {
+  .timeline {
+    font-size: 13px;
+    color: darkgrey;
+  }
+
+  .repl {
+    display: flex;
+    justify-content: space-between;
+    height: 15px;
+    padding-bottom: 5px;
+
+    p {
+      margin-top: -1px;
+    }
+  }
+
+  .delLike {
+    display: flex;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-weight: normal;
+    color: darkgray;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  img {
+    padding-top: 1px;
+    width: 13px;
+    height: 13px;
+  }
+}
+
+ul {
+  word-wrap: break-word;
+  list-style: none;
+  margin-left: -40px;
+  color: black;
+  white-space: nowrap;
+}
+
+li {
+  white-space: nowrap;
+}
+
+.send {
+  display: flex;
+  height: 40px;
+  margin-left: 0px;
+  width: 100%;
+  border: none;
+
+  input {
+    writing-mode: unset;
+    height: 30px;
+    width: 90%;
+    font-size: 13px;
+    color: black;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    ::placeholder {
+      color: darkgrey;
+    }
+  }
+
+  button {
+    width: 50px;
+    color: cornflowerblue;
+    background-color: white;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+#comment-wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+}
