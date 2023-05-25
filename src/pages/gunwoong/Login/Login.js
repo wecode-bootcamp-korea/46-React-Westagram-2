@@ -23,6 +23,16 @@ const LoginGw = () => {
 
   const isActive = id.includes('@') && pw.length >= 5;
 
+  const goFetch = () => {
+    fetch('http://10.58.52.110:3000/users/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({ email: id, password: pw }),
+    }) //요청
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
+
   return (
     <div className="loginGw">
       <h1 className="logoText">westagram</h1>
@@ -41,7 +51,7 @@ const LoginGw = () => {
         />
         <button
           id="loginBtn"
-          onClick={goToMain}
+          onClick={goFetch}
           disabled={!isActive}
           className={isActive ? 'tomato' : 'orange'}
         >
